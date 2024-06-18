@@ -1,9 +1,3 @@
-$green: hsl(75, 94%, 57%);
-$white: hsl(0, 0%, 100%);
-$grey: hsl(0, 0%, 20%);
-$dark_grey: hsl(0, 0%, 12%);
-$off_black: hsl(0, 0%, 8%);
-
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -11,9 +5,9 @@ $off_black: hsl(0, 0%, 8%);
   font-style: normal;
   font-variation-settings: "slnt" 0;
   margin: 0;
-  padding: 0;
-
+  padding: 0; }
   @media only screen and (max-width: 600px) {
-    font-size: 13px;
-  }
-}
+    * {
+      font-size: 13px; } }
+
+/*# sourceMappingURL=index.css.map */
