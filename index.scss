@@ -1,0 +1,36 @@
+$green: hsl(75, 94%, 57%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 20%);
+$dark_grey: hsl(0, 0%, 12%);
+$off_black: hsl(0, 0%, 8%);
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Bold.ttf");
+  font-weight: 700;
+}
+
+* {
+  font-family: "Inter", Courier, monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 13px;
+  }
+}
