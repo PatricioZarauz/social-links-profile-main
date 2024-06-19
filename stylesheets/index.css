@@ -27,15 +27,39 @@ main {
     border-color: white;
     border-style: solid;
     border-width: 0.25ch;
-    padding: 2rem; }
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
     main .card .card-user-profile {
       text-align: center; }
       main .card .card-user-profile img {
         width: 7rem;
         aspect-ratio: 1/1;
-        border-radius: 100%; }
+        border-radius: 100%;
+        margin-bottom: 2.4rem; }
+      main .card .card-user-profile h4 {
+        margin-bottom: 0.7rem;
+        font-size: 1.75rem;
+        font-weight: 600; }
+      main .card .card-user-profile h5 {
+        margin-bottom: 1.5rem;
+        font-weight: 700; }
+    main .card .user-links-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem; }
+      main .card .user-links-list li {
+        width: 100%; }
+        main .card .user-links-list li button {
+          width: inherit;
+          padding-block: 0.5rem; }
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

@@ -40,7 +40,11 @@ main {
     border-color: $white;
     border-style: solid;
     border-width: 0.25ch;
+    border-radius: 1rem;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
     .card-user-profile {
       text-align: center;
@@ -49,14 +53,36 @@ main {
         width: 7rem;
         aspect-ratio: 1/1;
         border-radius: 100%;
+        margin-bottom: 2.4rem;
       }
 
       h4 {
+        margin-bottom: 0.7rem;
+        font-size: 1.75rem;
+        font-weight: 600;
       }
 
       h5 {
+        margin-bottom: 1.5rem;
+        font-weight: 700;
       }
       p {
+      }
+    }
+
+    .user-links-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      li {
+        width: 100%;
+        button {
+          width: inherit;
+          padding-block: 0.5rem;
+        }
       }
     }
   }
@@ -64,4 +90,5 @@ main {
 
 footer {
   grid-area: footer;
+  text-align: center;
 }
