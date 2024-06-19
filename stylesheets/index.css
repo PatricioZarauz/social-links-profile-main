@@ -5,9 +5,37 @@
   font-style: normal;
   font-variation-settings: "slnt" 0;
   margin: 0;
-  padding: 0; }
-  @media only screen and (max-width: 600px) {
-    * {
-      font-size: 13px; } }
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: grid;
+  grid-template-areas: "main" "footer";
+  grid-template-rows: 1fr min-content;
+  background-color: #141414;
+  height: calc(100vh - 4rem);
+  margin: 2rem;
+  color: white; }
+
+main {
+  grid-area: main;
+  display: grid;
+  place-items: center; }
+  main .card {
+    width: 100%;
+    max-width: 40ch;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.25ch;
+    padding: 2rem; }
+    main .card .card-user-profile {
+      text-align: center; }
+      main .card .card-user-profile img {
+        width: 7rem;
+        aspect-ratio: 1/1;
+        border-radius: 100%; }
+
+footer {
+  grid-area: footer; }
 
 /*# sourceMappingURL=index.css.map */
