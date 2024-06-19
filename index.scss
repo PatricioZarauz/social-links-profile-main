@@ -4,7 +4,9 @@ $grey: hsl(0, 0%, 20%);
 $dark_grey: hsl(0, 0%, 12%);
 $off_black: hsl(0, 0%, 8%);
 
-* {
+*,
+*::after,
+*::before {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-size: 14px;
@@ -13,10 +15,6 @@ $off_black: hsl(0, 0%, 8%);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  // @media only screen and (max-width: 600px) {
-  //   font-size: 13px;
-  // }
 }
 
 body {
@@ -35,9 +33,10 @@ main {
   place-items: center;
 
   .card {
+    background-color: $dark_grey;
     width: 100%;
     max-width: 40ch;
-    border-color: $white;
+    border-color: transparent;
     border-style: solid;
     border-width: 0.25ch;
     border-radius: 1rem;
@@ -65,8 +64,7 @@ main {
       h5 {
         margin-bottom: 1.5rem;
         font-weight: 700;
-      }
-      p {
+        color: $green;
       }
     }
 
@@ -81,7 +79,45 @@ main {
         width: 100%;
         button {
           width: inherit;
-          padding-block: 0.5rem;
+          padding-block: 0.75rem;
+          background-color: $grey;
+          color: $white;
+          font-weight: 600;
+          cursor: pointer;
+          border-radius: 0.35rem;
+          border-style: none;
+          transform: none;
+          transition: transform 100ms ease-in;
+          transition: background-color 200ms ease-in;
+          transition: color 100ms ease-in;
+          position: relative;
+        }
+
+        button::after {
+          content: attr(data-content);
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: $green;
+          color: $off_black;
+          height: 100%;
+          width: 100%;
+          font-weight: 600;
+          padding-block: 0.75rem;
+          border-radius: 0.35rem;
+          border-style: none;
+          transform: scaleX(0);
+          transition: transform 250ms ease-in;
+          transform-origin: right;
+        }
+
+        button:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+
+        button:active {
+          transform: translateY(0.3ch);
         }
       }
     }
@@ -91,4 +127,7 @@ main {
 footer {
   grid-area: footer;
   text-align: center;
+  a {
+    color: $white;
+  }
 }
