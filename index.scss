@@ -77,7 +77,10 @@ main {
 
       li {
         width: 100%;
-        button {
+        a {
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
           width: inherit;
           padding-block: 0.75rem;
           background-color: $grey;
@@ -93,7 +96,7 @@ main {
           position: relative;
         }
 
-        button::after {
+        a::after {
           content: attr(data-content);
           position: absolute;
           top: 0;
@@ -111,12 +114,12 @@ main {
           transform-origin: right;
         }
 
-        button:hover::after {
+        a:hover::after {
           transform: scaleX(1);
           transform-origin: left;
         }
 
-        button:active {
+        a:active {
           transform: translateY(0.3ch);
         }
       }

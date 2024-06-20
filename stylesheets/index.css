@@ -58,7 +58,10 @@ main {
       gap: 1rem; }
       main .card .user-links-list li {
         width: 100%; }
-        main .card .user-links-list li button {
+        main .card .user-links-list li a {
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
           width: inherit;
           padding-block: 0.75rem;
           background-color: #333333;
@@ -72,7 +75,7 @@ main {
           transition: background-color 200ms ease-in;
           transition: color 100ms ease-in;
           position: relative; }
-        main .card .user-links-list li button::after {
+        main .card .user-links-list li a::after {
           content: attr(data-content);
           position: absolute;
           top: 0;
@@ -88,10 +91,10 @@ main {
           transform: scaleX(0);
           transition: transform 250ms ease-in;
           transform-origin: right; }
-        main .card .user-links-list li button:hover::after {
+        main .card .user-links-list li a:hover::after {
           transform: scaleX(1);
           transform-origin: left; }
-        main .card .user-links-list li button:active {
+        main .card .user-links-list li a:active {
           transform: translateY(0.3ch); }
 
 footer {
